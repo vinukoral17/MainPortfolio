@@ -76,7 +76,6 @@
 li { list-style: none; }
 
 a,
-img,
 span,
 data,
 button,
@@ -110,6 +109,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.75;
   overflow: hidden;
+  cursor: none;
+  
 }
 
 body.loaded { overflow: overlay; }
@@ -468,7 +469,7 @@ body.nav-active { overflow: hidden; }
 .hero-banner {
   border-radius: var(--blob-radius);
   overflow: hidden;
-  animation: blobAnim 30s linear infinite;
+  animation: blobAnim 20s linear infinite;
 }
 
 @keyframes blobAnim {
@@ -531,6 +532,88 @@ body.nav-active { overflow: hidden; }
   border-radius: inherit;
 }
 
+
+
+/*-----------------------------------*\
+  #CURSOR
+\*-----------------------------------*/
+
+.cursor-dot{
+  width: 5px;
+  height: 5px;
+  background-color: rgb(255, 251, 251);
+}
+
+.cursor-outline{
+  width: 30px;
+  height: 30px;
+  border: 2px solid hsla(0, 0%, 99%, 0.682);
+}
+
+.cursor-dot,
+.cursor-outline{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/*-----------------------------------*\
+  #CAROUSEL 
+\*-----------------------------------*/
+
+@keyframes slide {
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(-100%);
+  }
+}
+.logos{
+  overflow: hidden;
+  padding: 60px 0;
+  background: var(--white_a10);
+  white-space: nowrap;
+  position: relative;
+}
+.logos:before,
+.logos:after {
+  position:absolute;
+  top: 0;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+.logos:before{
+ left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0),white);
+  
+}
+.logos:after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0),white);
+}
+/*.logos:hover .logos-slide{
+  animation-play-state:paused
+}*/
+.logos-slide {
+  display: inline-block;
+  animation: slide 15s linear infinite;
+}
+
+.logos-slide .stylefont {
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Monoton', cursive;
+  font-family: 'Staatliches', cursive;
+  font-size: 100px;
+  height: 50px;
+  margin: 0 40px;
+}
 
 
 
