@@ -168,5 +168,37 @@ window.addEventListener("mousemove", function (e){
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
 
-var copy = document.querySelector(".softlogos-slide").cloneNode(true);
-document.querySelector(".softlogos").appendChild(copy);
+/*
+*
+The Slot machine effect
+*/
+
+
+animateLoop();
+
+
+/**
+ * Title Animation 
+ * 
+ * */
+const title = document.querySelector('.carouseltitle');
+
+    title.addEventListener('mousemove', (event) => {
+      const { offsetX, offsetY, target } = event;
+      const { clientWidth, clientHeight } = target;
+
+      const percentX = offsetX / clientWidth;
+      const percentY = offsetY / clientHeight;
+
+      const red = Math.floor(percentX * 255);
+      const green = Math.floor(percentY * 255);
+      const blue = Math.floor((percentX + percentY) * 255);
+
+      const color = `rgb(${red}, ${green}, ${blue})`;
+
+      title.style.color = color;
+    });
+
+    title.addEventListener('mouseleave', () => {
+      title.style.color = ''; // Reset to default color
+    });
