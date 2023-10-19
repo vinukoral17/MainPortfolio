@@ -148,57 +148,178 @@ for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
 *
 *CURSOR
 */
+
 //CURSOR WITHOUT FRAME
-const cursorDot = document.querySelector("[data-cursor-dot]");
-const cursorOutline = document.querySelector("[data-cursor-outline]");
+const cursors = document.querySelectorAll("[data-cursor]");
+const hoveredElements = [...document.querySelectorAll("button"), ...document.querySelectorAll("a")];
 
-window.addEventListener("mousemove", function (e){
-    const posX = e.clientX;
-    const posY = e.clientY;
+window.addEventListener("mousemove", function (event) {
 
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
+  const posX = event.clientX;
+  const posY = event.clientY;
 
-    cursorOutline.animate({
-    left : `${posX}px`,
-    top:`${posY}px`
-    }, { duration: 500, fill: "forwards"});
+  /** cursor dot position */
+  cursors[0].style.left = `${posX}px`;
+  cursors[0].style.top = `${posY}px`;
+
+  /** cursor outline position */
+  setTimeout(function () {
+    cursors[1].style.left = `${posX}px`;
+    cursors[1].style.top = `${posY}px`;
+  }, 80);
+
 });
 
+
+/** add hovered class when mouseover on hoverElements */
+addEventOnElements(hoveredElements, "mouseover", function () {
+  for (let i = 0, len = cursors.length; i < len; i++) {
+    cursors[i].classList.add("hovered");
+  }
+});
+
+/** remove hovered class when mouseout on hoverElements */
+addEventOnElements(hoveredElements, "mouseout", function () {
+  for (let i = 0, len = cursors.length; i < len; i++) {
+    cursors[i].classList.remove("hovered");
+  }
+});
+
+//Sliding Animation
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
 
-/*
-*
-The Slot machine effect
-*/
-
-
-animateLoop();
-
+var copy = document.querySelector(".title-slide").cloneNode(true);
+document.querySelector(".titles").appendChild(copy);
 
 /**
- * Title Animation 
- * 
- * */
-const title = document.querySelector('.carouseltitle');
+ * Element tilt effect
+ */
 
-    title.addEventListener('mousemove', (event) => {
-      const { offsetX, offsetY, target } = event;
-      const { clientWidth, clientHeight } = target;
+const tiltElements = document.querySelectorAll("[data-tilt]");
 
-      const percentX = offsetX / clientWidth;
-      const percentY = offsetY / clientHeight;
+const initTilt = function (event) {
 
-      const red = Math.floor(percentX * 255);
-      const green = Math.floor(percentY * 255);
-      const blue = Math.floor((percentX + percentY) * 255);
+  /** get tilt element center position */
+  const centerX = this.offsetWidth / 2;
+  const centerY = this.offsetHeight / 2;
 
-      const color = `rgb(${red}, ${green}, ${blue})`;
+  const tiltPosY = ((event.offsetX - centerX) / centerX) * 10;
+  const tiltPosX = ((event.offsetY - centerY) / centerY) * 10;
 
-      title.style.color = color;
-    });
+  this.style.transform = `perspective(1000px) rotateX(${tiltPosX}deg) rotateY(${tiltPosY - (tiltPosY * 2)}deg)`;
 
-    title.addEventListener('mouseleave', () => {
-      title.style.color = ''; // Reset to default color
-    });
+}
+
+addEventOnElements(tiltElements, "mousemove", initTilt);
+
+addEventOnElements(tiltElements, "mouseout", function () {
+  this.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+});
+
+
+
+///TIMELINE
+  (function($){
+    $.fn.timeline = function(){
+        var selectors = {
+            id: $(this),
+            item: $(this).find(".timeline-item"),
+            activeClass: "timeline-item--active",
+            img: ".timeline_img"
+          };
+        
+        selectors.item.eq(0).addClass(selectors.activeClass);
+        selectors.id.css(
+            //"background-image",
+            "url(" +
+            selectors.item
+            .first()
+            .find(selectors.img)
+            .attr("src")+
+            ")"
+          );
+
+        var itemLength = selectors.item.length;
+        $(window).scroll(function(){
+            var max, min;
+            var pos = $(this).scrollTop();
+
+            selectors.item.each(function(i){
+                min = $(this).offset().top;
+                max = $(this).height() + $(this).offset().top;
+                var that = $(this);
+                if (i === itemLength - 400 && pos > min + $(this).height()/2) {
+                    selectors.item.removeClass(selectors.activeClass);
+                    selectors.id.css(
+                     //  "background-image",
+                        "url(" +
+                        selectors.item
+                            .last()
+                            .find(selectors.img)
+                            .attr("src") +
+                        ")"
+                    );
+                    selectors.item.last().addClass(selectors.activeClass);
+                } else if (pos <= max - 200 && pos >= min) {
+                    selectors.id.css(
+                        ///"background-image",
+                        "url(" +
+                        $(this)
+                            .find(selectors.img)
+                            .attr("src") +
+                        ")"
+                    );
+                    selectors.item.removeClass(selectors.activeClass);
+                    $(this).addClass(selectors.activeClass);
+                }
+            });
+        });
+      };
+  })(jQuery); 
+  $("#timeline-1").timeline();
+  
+  
+//REVEAL ON SCROLL
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+  var reveals = document.querySelectorAll('.reveal');
+
+  for(var i = 0; i < reveals. length; i++){
+
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if(revealtop < windowheight - revealpoint){
+      reveals[i].classList.add('active');
+    }
+    else{
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+/**
+ * SCROLL REVEAL
+ */
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+
+const scrollReveal = function () {
+  for (let i = 0; i < revealElements.length; i++) {
+    const elementIsInScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight / 1.15;
+
+    if (elementIsInScreen) {
+      revealElements[i].classList.add("revealed");
+    } else {
+      revealElements[i].classList.remove("revealed");
+    }
+  }
+}
+
+window.addEventListener("scroll", scrollReveal);
+
+scrollReveal();

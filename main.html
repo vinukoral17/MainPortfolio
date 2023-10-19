@@ -10,13 +10,13 @@
     - primary meta tags
   -->
   <title>Vinu Koralage - Graduate </title>
-  <meta name="title" content="Kane Williams - Web & App Developer">
-  <meta name="description" content="This is a personal portfolio html template made by codewithsadee">
+  <meta name="title" content="Vinu Koralage - Web & App Developer">
+  <meta name="description" content="Vinu Koralages Personal Portfolio">
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="images/V.png" type="image/svg+xml">
 
   <!-- 
     - google font link
@@ -35,6 +35,11 @@
     - preload images
   -->
   <link rel="preload" as="image" href="./images/DSC_0291.jpg">
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 </head>
 
@@ -60,7 +65,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./images/logo.svg" width="170" height="40" alt="Pfolio home">
+        <img src="./images/icon/logo3.svg" width="170" height="40" alt="Pfolio home">
       </a>
 
       <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
@@ -76,23 +81,27 @@
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Resume</a>
+            <a href="CV/VinujaKoralageMain.pdf" class="navbar-link">Resume</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Services</a>
+            <a href="#aboutme" class="navbar-link">About Me</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Portfolio</a>
+            <a href="#skills" class="navbar-link">Skills</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Blog</a>
+            <a href="#services" class="navbar-link">Services</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Contact</a>
+            <a href="#timeline-1" class="navbar-link">Timeline</a>
+          </li>
+
+          <li>
+            <a href="#contacts" class="navbar-link">Contact</a>
           </li>
 
         </ul>
@@ -104,44 +113,45 @@
   </header>
 
 
-
-
-
   <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="section hero" aria-label="home">
-        <div class="container">
-
-          <div class="hero-content">
-
-            <h1 class="h1 hero-title">Vinu <br>Koralage</h1>
-
-            <p class="hero-subtitle">
-              Creative Web & App Developer
-            </p>
-
-            <div class="hero-banner">
-              <img src="./images/DSC_0291.jpg" width="800" height="800" alt="kane williams" class="w-100">
+      <section class="hura">
+        <div class="hero text-center" id="home">
+          <div class="container">
+  
+            <div class="banner-outline has-after" data-reveal="right">
+  
+              <div class="hero-banner img-holder has-after" style="--width: 500; --height: 680;" data-tilt>
+                <img src="images/DSC_0291.jpg" width="500" height="680" alt="Drew Hays" class="img-cover">
+              </div>
+  
+              <span class="span title"></span>
+  
             </div>
-
-            <p class="section-text">
-              Hi, I’m Vinuja Koralage and I am creative web & app developer who dream making the world better place by
-              creating captivating products.
-            </p>
-
-            <a href="VinujaKoralageCV.pdf" class="btn has-before">
-              <span class="span">Download CV</span>
-
-              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
-            </a>
-
+  
+            <div class="hero-content" data-reveal="left">
+  
+              <h1 class="h1 title">Hey There! Welcome To My Portfolio. </h1>
+  
+              <div class="wrapper">
+                <a href="CV/VinujaKoralageMain.pdf" class="btn btn:hover">
+                  <span class="span">Download CV</span>
+  
+                  <ion-icon name="cloud-download-outline" aria-hidden="true"></ion-icon>
+                </a>
+  
+                <p class="hero-text">
+                  BSc (Hons) Software Engineering Graduate.
+                </p>
+              </div>
+  
+            </div>
+  
+            <img src="images/hero-shape-1.png" width="559" height="232" alt="shape" class="shape shape-1">
+  
+            <img src="images/hero-shape-2.png" width="1358" height="497" alt="shape" class="shape shape-2">
+  
           </div>
-
         </div>
       </section>
 
@@ -150,7 +160,7 @@
         - #PROGRAMMING LANGUAGES
       -->
 
-      <section class="carousel">
+      <section class="carousel reveal">
         <h2 class="h2 carouseltitle">Experienced Programmer</h2>
           <div class="logos">
             <div class="logos-slide">
@@ -162,24 +172,72 @@
               <h2 class="stylefont">JavaScript</h2>
               <h2 class="stylefont">PHP</h2>
               <h2 class="stylefont">React</h2>
+              <h2 class="stylefont">J Query</h2>
               <h2 class="stylefont">C</h2>
-              <h2 class="stylefont">Dart</h2>
             </div>
         </div>        
       </section>
 
 
+      <section class="section blog reveal" aria-labelledby="blog-label" id="aboutme">
+        <div class="container">
 
+          <p class="section-subtitle" id="blog-label">About Me</p>
+
+          <h2 class="h2 section-title">Personal Profile</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="images/DSC_0381.JPG" width="470" height="700" loading="lazy"
+                    alt="Get Started With Tiktok Ads." class="img-cover">
+                </figure>
+              
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-24">
+                    <span class="span text-lg">22</span>
+                    AGE
+                  </time>
+
+                  <div>
+                    <h3 class="h3 card-title">Vinuja Nimhan Koralage</h3>
+
+                    <p class="card-text">
+                      I am a Software Engineering graduate student from the <a href="https://www.wlv.ac.uk/">University of Wolverhampton</a>I am a driven and motivated individual with a passion for learning. 
+                      I am confident in my ability to quickly grasp new concepts and adapt to every environment. 
+                      I possess excellent problem-solving skills, a detail-oriented approach, and a keen ability to think critically. 
+                      I have consistently demonstrated my ability to excel in challenging tasks and deliver high-quality results. 
+                      With my innate curiosity and proactive nature, I am committed to continually expanding my knowledge base in skill set.
+                    </p>
+
+                    <a href="https://www.linkedin.com/in/vinujakoralage/" class="btn btn:hover">
+                      <span class="span">LinkedIn</span>
+
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </section>
 
 
       <!-- 
         - #SKILLS
       -->
 
-      <section class="section skills" aria-label="our skills">
+      <section class="section skills reveal" aria-label="our skills" id="skills">
         <div class="container">
 
-          <p class="section-subtitle">I Make The Future</p>
+          <p class="section-subtitle">Workplace Proficinecy</p>
 
           <h2 class="h2 section-title">I Develop & Create Digital Future.</h2>
 
@@ -187,16 +245,20 @@
 
             <div>
               <p class="section-text">
-                Pellentesque magna magna semper dapibus felis necatin aliuen risus. Pellentesque habitant morbi senectus
-                dictum.
+                My ambition is to achieve excellence in the realm of full-stack development, 
+                encompassing both the dynamic world of mobile and web development. 
+                With an unwavering dedication to continuous growth and learning, 
+                I am committed to becoming the foremost authority in this field. 
+                My journey is guided by a relentless pursuit of innovation and a determination to deliver cutting-edge solutions 
+                that redefine the standards of mobile and web development.
               </p>
 
               <p class="section-text">
-                Web design magna magna semper dapibus felis necatin aliuen risus. Pellentesque habitant morbi tristique
-                senectus the neuse malesuada nullam ac lorem miss the duru.
+                I am resolutely committed to skill development and perpetual learning. My aspiration is to cultivate an ever-evolving skill set, 
+                fostering an environment of continuous improvement, innovation, and adaptability. 
               </p>
 
-              <a href="#" class="btn has-before">vinukoralage@gmail.com</a>
+              <a href="#contacts" class="btn btn:hover">Contact Me</a>
             </div>
 
             <div>
@@ -205,49 +267,49 @@
 
                 <li>
                   <div class="progress-wrapper">
-                    <p class="progress-label">Design</p>
+                    <p class="progress-label">Communication Skills</p>
 
-                    <data class="progress-value" value="90">90%</data>
+                    <data class="progress-value" value="92">92%</data>
                   </div>
 
                   <div class="progress-bg">
-                    <div class="progress" style="width: 90%;"></div>
+                    <div class="progress" style="width: 92%;"></div>
                   </div>
                 </li>
 
                 <li>
                   <div class="progress-wrapper">
-                    <p class="progress-label">Branding</p>
+                    <p class="progress-label">Critical Thinking</p>
 
-                    <data class="progress-value" value="80">80%</data>
+                    <data class="progress-value" value="94">94%</data>
                   </div>
 
                   <div class="progress-bg">
-                    <div class="progress" style="width: 80%;"></div>
+                    <div class="progress" style="width: 94%;"></div>
                   </div>
                 </li>
 
                 <li>
                   <div class="progress-wrapper">
-                    <p class="progress-label">Web Design</p>
+                    <p class="progress-label">Customer Service</p>
+
+                    <data class="progress-value" value="98">98%</data>
+                  </div>
+
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 98%;"></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Adaptability</p>
 
                     <data class="progress-value" value="95">95%</data>
                   </div>
 
                   <div class="progress-bg">
                     <div class="progress" style="width: 95%;"></div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="progress-wrapper">
-                    <p class="progress-label">Social Media</p>
-
-                    <data class="progress-value" value="85">85%</data>
-                  </div>
-
-                  <div class="progress-bg">
-                    <div class="progress" style="width: 85%;"></div>
                   </div>
                 </li>
 
@@ -265,7 +327,7 @@
         - #PROGRAMMING LANGUAGES
       -->
 
-      <section class="carouselsoftware">
+      <section class="carouselsoftware reveal">
         <h2 class="h2 carouseltitle">Experienced Software</h2>
           <div class="titles">
             <div class="title-slide">
@@ -273,9 +335,8 @@
                 <li class="stylefonts">Android Studio</li>
                 <li class="stylefonts">CodeIgnitor</li>
                 <li class="stylefonts">Figma</li>
-                <li class="stylefonts">Github</li>
+                <li class="stylefonts">Git</li>
                 <li class="stylefonts">VSCode</li>
-                <li class="stylefonts">Visual Studio</li>
                 <li class="stylefonts">Lightroom CC</li>
                 <li class="stylefonts">Photoshop</li>
                 <li class="stylefonts">Premiere Pro</li>
@@ -290,7 +351,7 @@
         - #SERVICE
       -->
 
-      <section class="service" aria-labelledby="service-label">
+      <section class="service reveal" aria-labelledby="service-label" id="services">
         <div class="container">
 
           <div class="title-wrapper">
@@ -304,9 +365,12 @@
             </div>
 
             <p class="section-text">
-              Phasellus et lacus suscipit congue nisl the volutpat magna. donec miss the drana risus tincidunt convallis
-              velit orci congue tortor eu dignissim ipsum suam non odio. Pellenta esuntion miss the imperdiet metus
-              ornare.
+              As a recent graduate in software engineering, 
+              I'm taking my passion for technology to new heights. 
+              I've embarked on a fulfilling journey as a computer science tutor, 
+              helping others navigate the complexities of the field. Simultaneously, 
+              I'm investing in my own growth by pursuing a <a href="https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer">Full Stack Developer course through IBM.</a>  
+              This dual path allows me to both share my knowledge and expand my expertise in the ever-evolving world of technology.
             </p>
 
           </div>
@@ -325,12 +389,59 @@
                   <h3 class="h3 card-title">Website Design</h3>
 
                   <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
+                    I am deeply passionate about mastering the art of web development, 
+                    driven by an unwavering commitment to creating the finest websites. 
+                    Each day, I diligently immerse myself in the world of web development, 
+                    engaging in continuous study and research to refine my skills.
                   </p>
 
                   <span class="text-lg card-number">01</span>
 
                   <a href="#" class="layer-link" aria-label="More about my website design service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="grid-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Mobile App Development</h3>
+
+                  <p class="card-text">
+                    I wholeheartedly cherish the process of crafting innovative mobile applications. 
+                    The joy of continually expanding my knowledge and skill set while building fresh, exciting apps is something I hold dear. 
+                  </p>
+
+                  <span class="text-lg card-number">02</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my SEO Marketing service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="camera-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Photography</h3>
+
+                  <p class="card-text">
+                    Photography is my profound passion. 
+                    Beyond my primary job, I've honed my skills to a professional level, 
+                    specializing in capturing private events with a storytelling touch. 
+                    I'm dedicated to preserving moments that resonate with both me and my clients.
+                  </p>
+
+                  <span class="text-lg card-number">03</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my eCommerce service"></a>
 
                 </div>
               </li>
@@ -345,47 +456,7 @@
                   <h3 class="h3 card-title">Social Media Managing</h3>
 
                   <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
-                  </p>
-
-                  <span class="text-lg card-number">02</span>
-
-                  <a href="#" class="layer-link" aria-label="More about my SEO Marketing service"></a>
-
-                </div>
-              </li>
-
-              <li class="slider-item" data-slider-item>
-                <div class="service-card">
-
-                  <div class="card-icon">
-                    <ion-icon name="basket-outline"></ion-icon>
-                  </div>
-
-                  <h3 class="h3 card-title">Photography</h3>
-
-                  <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
-                  </p>
-
-                  <span class="text-lg card-number">03</span>
-
-                  <a href="#" class="layer-link" aria-label="More about my eCommerce service"></a>
-
-                </div>
-              </li>
-
-              <li class="slider-item" data-slider-item>
-                <div class="service-card">
-
-                  <div class="card-icon">
-                    <ion-icon name="color-filter-outline"></ion-icon>
-                  </div>
-
-                  <h3 class="h3 card-title">Graphic Design</h3>
-
-                  <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
+                    I'm currently volunteering as a Media Manager for the Youth Community of Birmingham. I handle email communication, social media, and create engaging content. It's a fulfilling way to empower and connect with the city's youth through digital channels.
                   </p>
 
                   <span class="text-lg card-number">04</span>
@@ -405,7 +476,7 @@
                   <h3 class="h3 card-title">Digital Marketing</h3>
 
                   <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
+                    Volunteering as a media manager has afforded me valuable experience in the realm of digital marketing. This hands-on role has provided me with the practical knowledge and skills needed to navigate the ever-evolving landscape of online promotion and engagement.g
                   </p>
 
                   <span class="text-lg card-number">05</span>
@@ -419,13 +490,13 @@
                 <div class="service-card">
 
                   <div class="card-icon">
-                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                    <ion-icon name="people-outline"></ion-icon>
                   </div>
 
-                  <h3 class="h3 card-title">Social Media</h3>
+                  <h3 class="h3 card-title">Tutoring</h3>
 
                   <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
+                    I have a strong background in tutoring computer science and currently teach Python and C# programming languages to GCSE and A-Levels students, making a meaningful impact in computer science education.
                   </p>
 
                   <span class="text-lg card-number">06</span>
@@ -454,13 +525,352 @@
         </div>
       </section>
 
+      <!--
+        EDUCATION & WorkExperience
+      -->
+      <div class="timeline-container reveal" id="timeline-1">
+        <div class="timeline-header">
+          <h2 class="timeline-header_title">Education and Work Experience </h2>
+          <h3 class="timeline-header_subtitle">2016 - Present</h3>
+        </div>
+        
+        <div class="timeline">
+
+          <div class="timeline-item" data-text="Starting Point">
+            <div class="timeline_content">
+              <img src="" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2016</h2>
+              <p class="timeline_content-desc">In 2016, I made a defining choice when I opted for computer science as my subject of study for my GSCE.
+                 This decision marked the beginning of a thrilling journey into the dynamic world of programming, algorithms, and digital innovation.
+                  It was a pivotal moment where I realized the incredible potential of computers to transform ideas into reality. 
+                  Throughout those years, I honed my skills and gained a profound appreciation for the logic and creativity demanded by the field.
+               </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-text="Confirmation of Field">
+            <div class="timeline_content">
+              <img src="" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2017</h2>
+              <p class="timeline_content-desc"> In 2017, I successfully completed my GCSE in Computer Science, 
+                achieving an A* in both Mathematics and Computer Science, along with outstanding grades in my other subjects. 
+                This accomplishment fueled my desire to further delve into the world of computer science and continue my learning journey. </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-text="New Environment">
+            <div class="timeline_content">
+              <img src="images/steyning-grammar-school-logo.png" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2018</h2>
+              <p class="timeline_content-desc"> In 2018, I embarked on my A-level journey at<a href="https://www.sgs.uk.net/"><b>Steyning Grammar School,</b></a>immersing myself in the realms of computer science and product design. 
+                This academic pursuit introduced me to a plethora of programming languages, software applications, and ignited new aspirations within me. 
+                Despite the multitude of challenges that arose, particularly in grasping unfamiliar experiences, 
+                I remained determined to overcome them and push my boundaries in pursuit of my educational and personal growth. </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-text="First Professional Work Experience">
+            <div class="timeline_content">
+              <img src="images/Capgemini.jpeg" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2019</h2>
+              <p class="timeline_content-desc">In 2019, I was fortunate enough to embark on my first professional journey by joining <b><a href="https://www.capgemini.com/gb-en/about-us/"> Capgemini</a></b>in Worthing as a Software Engineer.
+                 This experience was nothing short of transformative, as I had the invaluable opportunity to shadow an exceptional team of developers, immersing myself in the intricate world of software development. 
+                 Simultaneously, I began sharing my passion for programming by tutoring younger students in the Python programming language, 
+                 fostering a sense of enthusiasm and knowledge-sharing that would continue to inspire me throughout my career. </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-text="The Kickstart">
+            <div class="timeline_content">
+              <img src="images/university-wolverhampton.png" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2020</h2>
+              <p class="timeline_content-desc">
+                The year 2020 brought unprecedented challenges to the entire world. 
+                 I received the news of my acceptance to the <a href="https://www.wlv.ac.uk/"><b>University of Wolverhampton,</b></a> 
+                marking the beginning of a new chapter in my academic journey. In parallel, 
+                I took on a web development project for a private client, serving as a significant stepping 
+                stone to kickstart my university studies. This experience not only enriched my practical 
+                skills but also laid the foundation for a successful transition into higher education. </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-text="Collaboration ">
+            <div class="timeline_content">
+              <img src="images/group.jpg" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2021</h2>
+              <p class="timeline_content-desc">n 2021, my educational journey took a significant leap.
+                I immersed myself in various course modules, notably in collaborative development, 
+                which provided the opportunity to collaborate with friends on group projects and engage in real client projects. 
+                This cooperative learning experience added a dynamic dimension to my academic path, 
+                nurturing my passion for computer science. Moreover, during this year, I joined the Mainframe Society, 
+                dedicated to exploring IBM's mainframe technology's potential. This involvement also led me to participate 
+                in the <a href="https://www.ibm.com/z/resources/zxplore"><b>IBM Z Xplore program,</b></a> broadening my horizons in the ever-evolving world of technology.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-text="Forever a Learner">
+            <div class="timeline_content">
+              <img src="" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2022</h2>
+              <p class="timeline_content-desc">In the years 2022 and 2023, 
+                I reached the culmination of my course. These final years introduced me to captivating modules such as secure 
+                mobile development, where I embarked on the journey of learning the fundamentals of mobile application development. 
+                Additionally, I delved into advanced web development modules, during which I had the opportunity to work on creating 
+                a fully dynamic website, further enhancing my practical skills and knowledge in the field of web development. <a href="https://mi-linux.wlv.ac.uk/~2010635/project-root/public/home"><b>The Dynamic Website</b></a></p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-text="Graduate">
+            <div class="timeline_content">
+              <img src="images/DSC_0653.jpg" class="timeline_img" alt="">
+              <h2 class="timeline_content-title">2023</h2>
+              <p class="timeline_content-desc">In the year 2023, I proudly graduated with a Bachelor of Science in Computer Science Software Engineering from the University of Wolverhampton, 
+                marking a significant milestone in my educational journey. 
+                Equipped with a strong foundation in software engineering and a passion for technology, 
+                I am now eager and prepared to embark on my professional career in the field, 
+                ready to contribute my skills and knowledge to the ever-evolving world of computer science. </p>
+            </div>
+          </div>
 
 
-
-
+        </div>
+      </div>
     
+      <!--
+        PHOTOGRAPHY
+      -->
+      <section class="service reveal" aria-labelledby="service-label" id="services">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <div>
+              <p class="section-subtitle">
+                Passionate Hobby
+              </p>
+
+              <h2 class="h2 section-title" id="service-label">Photography</h2>
+            </div>
+
+            <p class="section-text">
+              Beyond my academic pursuits, I am deeply passionate about photography. 
+              It is a creative endeavor that I wholeheartedly adore. My love for photography is intertwined with my passion for travel, 
+              as it allows me to preserve and immortalise fleeting moments from my journeys. I continuously explore various styles and techniques to push the boundaries of my craft. 
+              Below, you will find a selection of my work, which I am excited to share with you.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section gallery" id="gallery">
+        <div class="container">
+
+          <ul class="gallery-list reveal">
+
+            <li class="gallery-item" data-reveal>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/img10.jpg" width="450" height="625" loading="lazy" alt="The Drunken"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/rePUXA86MrKnchRf6" class="card-title">A Timeless Bond</a>
+                  </h3>
+
+                  <span class="card-tag">Manchester - United Kingdom</span>
+                </div>
+
+
+              </div>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/img9.jpg" width="450" height="625" loading="lazy"
+                    alt="Lettuce Entertain" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/aZNvmnEEBeWV6a6t6" class="card-title">Contemplation Amongst Artifacts</a>
+                  </h3>
+
+                  <span class="card-tag">London - United Kingdom</span>
+                </div>
+
+                
+              </div>
+
+            </li>
+
+            <li class="gallery-item" data-reveal>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/img12.jpg" width="450" height="625" loading="lazy" alt="Leaping Lizard"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/vX4oDyYugQuckuyg8" class="card-title">Fresh Salt Breeze</a>
+                  </h3>
+
+                  <span class="card-tag">Hikkaduwa - Sri Lanka</span>
+                </div>
+
+              </div>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/img16.jpg" width="450" height="625" loading="lazy" alt="Juan More Taco"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/iyjfuPxDKz1JJM2i8" class="card-title">Nature's Symphony</a>
+                  </h3>
+
+                  <span class="card-tag">Plitvička National Park - Croatia</span>
+                </div>
+
+                
+
+              </div>
+
+            </li>
+
+            <li class="gallery-item" data-reveal>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/img17.jpg" width="450" height="625" loading="lazy" alt="Goldilox Bagels"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/ShwJ1tx7f5aDa9kV6" class="card-title">A Journey Through Natural Beauty</a>
+                  </h3>
+
+                  <span class="card-tag">Krka National Park - Croatia</span>
+                </div>
+
+               
+
+              </div>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/img18.jpg" width="450" height="625" loading="lazy" alt="Cookie Monstah"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/5s3DbmUiNw3ceoYW9" class="card-title">Whispers of Stones</a>
+                  </h3>
+
+                  <span class="card-tag">Bagnoregio - Italy</span>
+                </div>
+
+                
+
+              </div>
+
+            </li>
+
+            <li class="gallery-item" data-reveal>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/img19.jpg" width="450" height="625" loading="lazy"
+                    alt="Divine Pastabilities" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/TKA7oLYCrxNQLuCF9" class="card-title">Morning Brew</a>
+                  </h3>
+
+                  <span class="card-tag">Padukka - Sri Lanka</span>
+                </div>
+
+               
+
+              </div>
+
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder has-before" style="--width: 450; --height: 625;">
+                  <img src="Photography/image1.jpg" width="450" height="625" loading="lazy"
+                    alt="The Lockhart Bar" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h6">
+                    <a href="https://maps.app.goo.gl/eDdT6tFHTp4esXBa9" class="card-title">Midnight Mystique by Sunlight</a>
+                  </h3>
+
+                  <span class="card-tag">Matera - Italy</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #CONTACT
+      -->
+      <section class="section contact" aria-label="contact" id="contacts">
+        <div class="container">
+
+          <div class="contact-card">
+
+            <div class="contact-content" data-reveal="left">
+              <p class="section-subtitle">
+                Contact Me
+              </p>
+              <h2 class="h2 section-title">If you like what you see, let's work together.</h2>
+
+              <p class="section-text">
+                If you require any of my services or to be friends, feel free to contact me.
+              </p>
+
+            </div>
+
+            <form action="" class="contact-form" data-reveal="right">
+
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Name *" required class="input-field">
+
+                <input type="email" name="email_address" placeholder="Email *" required class="input-field">
+              </div>
+
+              <textarea name="message" placeholder="Message *" required class="input-field"></textarea>
+
+              <button type="submit" class="btn btn:hover">Send message</button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
     </article>
   </main>
+
 
 
 
@@ -468,14 +878,15 @@
     - #CURSOR
   -->
 
-  <div class="cursor-dot" data-cursor-dot></div>
-  <div class="cursor-outline" data-cursor-outline></div>
+  <div class="cursor-dot" data-cursor></div>
+  <div class="cursor-outline" data-cursor></div>
 
   <!-- 
     - #FOOTER
   -->
+  <p class="copyright ">Made with love</p>
 
-  <footer class="footer">
+  <footer class="footer ">
     <div class="container">
 
       <ul class="footer-list">
@@ -485,7 +896,7 @@
         </li>
 
         <li>
-          <a href="mailto:vinukoralage@gmail.com" class="footer-link">vinukoralage@gmail.com</a>
+          <a href="mailto:vinukoralage@gmail.com" class="footer-link"> Follow on my Socials</a>
         </li>
 
       </ul>
@@ -497,7 +908,7 @@
         </li>
 
         <li>
-          <a href="#" class="footer-link">Birmingham — United Kingdom</a>
+          <a href="#" class="footer-link">United Kingdom</a>
         </li>
 
       </ul>
@@ -547,6 +958,10 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 
